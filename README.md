@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# PopX App
+
+A React-based mobile app interface for PopX, featuring user registration, login, and account management functionality. This project was created as part of an interview qualification task.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

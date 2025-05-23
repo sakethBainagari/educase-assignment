@@ -1,0 +1,206 @@
+.create-account-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f5ff 100%);
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.create-account-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.create-account-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.create-account-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.back-link svg {
+  margin-right: 6px;
+}
+
+.create-account-header {
+  margin-bottom: 30px;
+}
+
+.create-account-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333333;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--light-purple);
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.create-account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px; /* Add padding at the bottom for better scrolling */
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--primary-color);
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+input {
+  padding: 14px 16px 14px 40px;
+  border: 1px solid rgba(108, 37, 255, 0.2);
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(108, 37, 255, 0.2);
+  border-color: var(--primary-color);
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(108, 37, 255, 0.2);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.radio-option.selected {
+  background-color: var(--light-purple);
+  border-color: var(--primary-color);
+}
+
+.radio-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.radio-option label {
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.create-account-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #7c42ff 0%, #6c25ff 100%);
+  color: white;
+  box-shadow: 0 2px 6px rgba(108, 37, 255, 0.2);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.create-account-button:hover {
+  background: linear-gradient(135deg, #8953ff 0%, #7c42ff 100%);
+  box-shadow: 0 4px 12px rgba(108, 37, 255, 0.3);
+}
+
+.create-account-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button-icon {
+  font-size: 18px;
+}
+
+/* Loading animation */
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
